@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 
 // Creating the Traffic Light component
 export const TrafficLight = () => {
-	const [color, setColor] = useState("red");
+	const [color, setColor] = useState("");
 
 	let circle = <h1 className="fas fa-circle"></h1>;
 
 	return (
 		<>
-			<div className="container bg-dark text-center">
+			<div className="trafficlight bg-dark text-center p-2 align-middle rounded justify-content-center">
 				<div
 					className={
 						color == "red" ? "text-danger highlight" : "text-danger"
@@ -36,6 +36,7 @@ export const TrafficLight = () => {
 					{circle}
 				</div>
 			</div>
+			<div className="stick bg-dark"></div>
 		</>
 	);
 };
