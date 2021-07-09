@@ -7,7 +7,9 @@ export const TrafficLight = () => {
 
 	return (
 		<>
+			{/* Main div for the traffic light */}
 			<div className="trafficlight">
+				{/* Div's for the individual traffic lights */}
 				<div
 					className={
 						color == "red" ? "circle red highlight" : "circle red"
@@ -28,6 +30,8 @@ export const TrafficLight = () => {
 					}
 					onClick={() => setColor("green")}></div>
 			</div>
+
+			{/* Creating bottom pole of traffic light */}
 			<div className="stick"></div>
 		</>
 	);
