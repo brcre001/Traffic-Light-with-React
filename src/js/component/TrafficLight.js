@@ -1,42 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 // Creating the Traffic Light component
 export const TrafficLight = () => {
 	const [color, setColor] = useState("");
 
-	let circle = <h1 className="fas fa-circle"></h1>;
-
 	return (
 		<>
-			<div className="trafficlight bg-dark text-center p-2 align-middle rounded justify-content-center">
+			<div className="trafficlight">
 				<div
 					className={
-						color == "red" ? "text-danger highlight" : "text-danger"
+						color == "red" ? "circle red highlight" : "circle red"
 					}
-					onClick={() => setColor("red")}>
-					{circle}
-				</div>
+					onClick={() => setColor("red")}></div>
 				<div
 					className={
 						color == "yellow"
-							? "text-warning highlight"
-							: "text-warning"
+							? "circle yellow highlight"
+							: "circle yellow"
 					}
-					onClick={() => setColor("yellow")}>
-					{circle}
-				</div>
+					onClick={() => setColor("yellow")}></div>
 				<div
 					className={
 						color == "green"
-							? "text-success highlight"
-							: "text-success"
+							? "circle green highlight"
+							: "circle green"
 					}
-					onClick={() => setColor("green")}>
-					{circle}
-				</div>
+					onClick={() => setColor("green")}></div>
 			</div>
-			<div className="stick bg-dark"></div>
+			<div className="stick"></div>
 		</>
 	);
 };
