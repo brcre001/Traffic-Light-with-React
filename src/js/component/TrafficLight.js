@@ -32,7 +32,7 @@ export const TrafficLight = () => {
 			</div>
 
 			{/* Creating bottom pole of traffic light */}
-			<div className="stick"></div>
+			<div className="stick" onClick={() => setColor("")}></div>
 		</>
 	);
 };
