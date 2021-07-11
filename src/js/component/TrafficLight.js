@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // Creating the Traffic Light component
 export const TrafficLight = () => {
-	const [color, setColor] = useState("");
+	const [color, setColor] = useState("red");
 
 	return (
 		<>
@@ -12,21 +12,23 @@ export const TrafficLight = () => {
 				{/* Div's for the individual traffic lights */}
 				<div
 					className={
-						color == "red" ? "circle red highlight" : "circle red"
+						color == "red"
+							? "circle red highlight"
+							: "circle red black"
 					}
 					onClick={() => setColor("red")}></div>
 				<div
 					className={
 						color == "yellow"
 							? "circle yellow highlight"
-							: "circle yellow"
+							: "circle yellow black"
 					}
 					onClick={() => setColor("yellow")}></div>
 				<div
 					className={
 						color == "green"
 							? "circle green highlight"
-							: "circle green"
+							: "circle green black"
 					}
 					onClick={() => setColor("green")}></div>
 			</div>
